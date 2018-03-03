@@ -60,4 +60,22 @@ vclVecMin <- function(A){
     return(C)
 }
 
+# GPU Vector sum
+vclVecSum <- function(A){
+    
+    type <- typeof(A)
+    
+    C <- switch(type,
+                integer = {
+                    stop("integer not currently implemented")
+                },
+                float = {cpp_vclVector_sum(A@address, 6L)
+                },
+                double = {
+                    cpp_vclVector_sum(A@address, 8L)
+                },
+                stop("type not recognized")
+    )
+    return(C)
+}
 
