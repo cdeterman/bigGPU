@@ -1,4 +1,3 @@
-
 #include "gpuR/windows_check.hpp"
 
 // eigen headers for handling the R input data
@@ -218,6 +217,18 @@ cpp_vclMatrix_sum(
     viennacl::matrix_range<viennacl::matrix<T> > vcl_A = ptrA->data();
     
     T res = viennacl::linalg::sum(viennacl::linalg::row_sum(vcl_A));
+    return wrap(res);
+}
+
+template <typename T>
+SEXP
+cpp_vclVector_sum(
+    SEXP ptrA_)
+{    
+    Rcpp::XPtr<dynVCLVec<T> > pA(ptrA_);
+    viennacl::vector_range<viennacl::vector_base<T> > vcl_A  = pA->data();
+    
+    T res = viennacl::linalg::sum(vcl_A);
     return wrap(res);
 }
 
@@ -1081,6 +1092,23 @@ cpp_vclMatrix_sum(
         return cpp_vclMatrix_sum<float>(ptrA);
     case 8:
         return cpp_vclMatrix_sum<double>(ptrA);
+    default:
+        throw Rcpp::exception("unknown type detected for vclMatrix object!");
+    }
+}
+// [[Rcpp::export]]
+SEXP
+cpp_vclVector_sum(
+    SEXP ptrA,
+    const int type_flag)
+{
+    switch(type_flag) {
+    case 4:
+        return cpp_vclVector_sum<int>(ptrA);
+    case 6:
+        return cpp_vclVector_sum<float>(ptrA);
+    case 8:
+        return cpp_vclVector_sum<double>(ptrA);
     default:
         throw Rcpp::exception("unknown type detected for vclMatrix object!");
     }

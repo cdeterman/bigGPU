@@ -278,18 +278,6 @@ truncDoublegpuMat <- function(ptrA_, nr, nc) {
     .Call(`_gpuR_truncDoublegpuMat`, ptrA_, nr, nc)
 }
 
-cpp_vcl_nrow <- function(ptrA, type_flag) {
-    .Call(`_gpuR_cpp_vcl_nrow`, ptrA, type_flag)
-}
-
-cpp_vcl_ncol <- function(ptrA, type_flag) {
-    .Call(`_gpuR_cpp_vcl_ncol`, ptrA, type_flag)
-}
-
-cpp_vclVector_size <- function(ptrA, type_flag) {
-    .Call(`_gpuR_cpp_vclVector_size`, ptrA, type_flag)
-}
-
 cpp_gpuVector_size <- function(ptrA, type_flag) {
     .Call(`_gpuR_cpp_gpuVector_size`, ptrA, type_flag)
 }
@@ -312,6 +300,18 @@ cpp_gpuMatrix_nrow <- function(ptrA, type_flag) {
 
 cpp_gpuMatrix_ncol <- function(ptrA, type_flag) {
     .Call(`_gpuR_cpp_gpuMatrix_ncol`, ptrA, type_flag)
+}
+
+cpp_vcl_nrow <- function(ptrA, type_flag) {
+    .Call(`_gpuR_cpp_vcl_nrow`, ptrA, type_flag)
+}
+
+cpp_vcl_ncol <- function(ptrA, type_flag) {
+    .Call(`_gpuR_cpp_vcl_ncol`, ptrA, type_flag)
+}
+
+cpp_vclVector_size <- function(ptrA, type_flag) {
+    .Call(`_gpuR_cpp_vclVector_size`, ptrA, type_flag)
 }
 
 cpp_identity_vclMatrix <- function(ptrA, type_flag) {
@@ -876,6 +876,10 @@ cpp_vclMatrix_rowsum <- function(ptrA, ptrB, type_flag) {
 
 cpp_vclMatrix_sum <- function(ptrA, type_flag) {
     .Call(`_gpuR_cpp_vclMatrix_sum`, ptrA, type_flag)
+}
+
+cpp_vclVector_sum <- function(ptrA, type_flag) {
+    .Call(`_gpuR_cpp_vclVector_sum`, ptrA, type_flag)
 }
 
 cpp_vclMatrix_svd <- function(ptrA, ptrD, ptrU, ptrV, type_flag, ctx_id) {

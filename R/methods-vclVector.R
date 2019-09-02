@@ -322,6 +322,7 @@ setMethod("Summary", c(x="vclVector"),
               result <- switch(op,
                                `max` = vclVecMax(x),
                                `min` = vclVecMin(x),
+                               `sum` = vclVecSum(x),
                                stop("undefined operation")
               )
               return(result)

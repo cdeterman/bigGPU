@@ -761,42 +761,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// cpp_vcl_nrow
-SEXP cpp_vcl_nrow(SEXP ptrA, const int type_flag);
-RcppExport SEXP _gpuR_cpp_vcl_nrow(SEXP ptrASEXP, SEXP type_flagSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
-    Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
-    rcpp_result_gen = Rcpp::wrap(cpp_vcl_nrow(ptrA, type_flag));
-    return rcpp_result_gen;
-END_RCPP
-}
-// cpp_vcl_ncol
-SEXP cpp_vcl_ncol(SEXP ptrA, const int type_flag);
-RcppExport SEXP _gpuR_cpp_vcl_ncol(SEXP ptrASEXP, SEXP type_flagSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
-    Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
-    rcpp_result_gen = Rcpp::wrap(cpp_vcl_ncol(ptrA, type_flag));
-    return rcpp_result_gen;
-END_RCPP
-}
-// cpp_vclVector_size
-SEXP cpp_vclVector_size(SEXP ptrA, const int type_flag);
-RcppExport SEXP _gpuR_cpp_vclVector_size(SEXP ptrASEXP, SEXP type_flagSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
-    Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
-    rcpp_result_gen = Rcpp::wrap(cpp_vclVector_size(ptrA, type_flag));
-    return rcpp_result_gen;
-END_RCPP
-}
 // cpp_gpuVector_size
 SEXP cpp_gpuVector_size(SEXP ptrA, const int type_flag);
 RcppExport SEXP _gpuR_cpp_gpuVector_size(SEXP ptrASEXP, SEXP type_flagSEXP) {
@@ -867,6 +831,42 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
     Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
     rcpp_result_gen = Rcpp::wrap(cpp_gpuMatrix_ncol(ptrA, type_flag));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_vcl_nrow
+SEXP cpp_vcl_nrow(SEXP ptrA, const int type_flag);
+RcppExport SEXP _gpuR_cpp_vcl_nrow(SEXP ptrASEXP, SEXP type_flagSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
+    Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_vcl_nrow(ptrA, type_flag));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_vcl_ncol
+SEXP cpp_vcl_ncol(SEXP ptrA, const int type_flag);
+RcppExport SEXP _gpuR_cpp_vcl_ncol(SEXP ptrASEXP, SEXP type_flagSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
+    Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_vcl_ncol(ptrA, type_flag));
+    return rcpp_result_gen;
+END_RCPP
+}
+// cpp_vclVector_size
+SEXP cpp_vclVector_size(SEXP ptrA, const int type_flag);
+RcppExport SEXP _gpuR_cpp_vclVector_size(SEXP ptrASEXP, SEXP type_flagSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
+    Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_vclVector_size(ptrA, type_flag));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -2857,6 +2857,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// cpp_vclVector_sum
+SEXP cpp_vclVector_sum(SEXP ptrA, const int type_flag);
+RcppExport SEXP _gpuR_cpp_vclVector_sum(SEXP ptrASEXP, SEXP type_flagSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ptrA(ptrASEXP);
+    Rcpp::traits::input_parameter< const int >::type type_flag(type_flagSEXP);
+    rcpp_result_gen = Rcpp::wrap(cpp_vclVector_sum(ptrA, type_flag));
+    return rcpp_result_gen;
+END_RCPP
+}
 // cpp_vclMatrix_svd
 void cpp_vclMatrix_svd(SEXP ptrA, SEXP ptrD, SEXP ptrU, SEXP ptrV, int type_flag, int ctx_id);
 RcppExport SEXP _gpuR_cpp_vclMatrix_svd(SEXP ptrASEXP, SEXP ptrDSEXP, SEXP ptrUSEXP, SEXP ptrVSEXP, SEXP type_flagSEXP, SEXP ctx_idSEXP) {
@@ -2946,15 +2958,15 @@ static const R_CallMethodDef CallEntries[] = {
     {"_gpuR_truncIntgpuMat", (DL_FUNC) &_gpuR_truncIntgpuMat, 3},
     {"_gpuR_truncFloatgpuMat", (DL_FUNC) &_gpuR_truncFloatgpuMat, 3},
     {"_gpuR_truncDoublegpuMat", (DL_FUNC) &_gpuR_truncDoublegpuMat, 3},
-    {"_gpuR_cpp_vcl_nrow", (DL_FUNC) &_gpuR_cpp_vcl_nrow, 2},
-    {"_gpuR_cpp_vcl_ncol", (DL_FUNC) &_gpuR_cpp_vcl_ncol, 2},
-    {"_gpuR_cpp_vclVector_size", (DL_FUNC) &_gpuR_cpp_vclVector_size, 2},
     {"_gpuR_cpp_gpuVector_size", (DL_FUNC) &_gpuR_cpp_gpuVector_size, 2},
     {"_gpuR_cpp_gpuVector_max", (DL_FUNC) &_gpuR_cpp_gpuVector_max, 3},
     {"_gpuR_cpp_gpuMatrix_max", (DL_FUNC) &_gpuR_cpp_gpuMatrix_max, 2},
     {"_gpuR_cpp_gpuMatrix_min", (DL_FUNC) &_gpuR_cpp_gpuMatrix_min, 2},
     {"_gpuR_cpp_gpuMatrix_nrow", (DL_FUNC) &_gpuR_cpp_gpuMatrix_nrow, 2},
     {"_gpuR_cpp_gpuMatrix_ncol", (DL_FUNC) &_gpuR_cpp_gpuMatrix_ncol, 2},
+    {"_gpuR_cpp_vcl_nrow", (DL_FUNC) &_gpuR_cpp_vcl_nrow, 2},
+    {"_gpuR_cpp_vcl_ncol", (DL_FUNC) &_gpuR_cpp_vcl_ncol, 2},
+    {"_gpuR_cpp_vclVector_size", (DL_FUNC) &_gpuR_cpp_vclVector_size, 2},
     {"_gpuR_cpp_identity_vclMatrix", (DL_FUNC) &_gpuR_cpp_identity_vclMatrix, 2},
     {"_gpuR_cpp_vclMatrix_get_diag", (DL_FUNC) &_gpuR_cpp_vclMatrix_get_diag, 3},
     {"_gpuR_cpp_vclMat_vclVec_set_diag", (DL_FUNC) &_gpuR_cpp_vclMat_vclVec_set_diag, 3},
@@ -3096,6 +3108,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_gpuR_cpp_vclMatrix_rowmean", (DL_FUNC) &_gpuR_cpp_vclMatrix_rowmean, 3},
     {"_gpuR_cpp_vclMatrix_rowsum", (DL_FUNC) &_gpuR_cpp_vclMatrix_rowsum, 3},
     {"_gpuR_cpp_vclMatrix_sum", (DL_FUNC) &_gpuR_cpp_vclMatrix_sum, 2},
+    {"_gpuR_cpp_vclVector_sum", (DL_FUNC) &_gpuR_cpp_vclVector_sum, 2},
     {"_gpuR_cpp_vclMatrix_svd", (DL_FUNC) &_gpuR_cpp_vclMatrix_svd, 6},
     {"_gpuR_cpp_gpuMatrix_svd", (DL_FUNC) &_gpuR_cpp_gpuMatrix_svd, 5},
     {NULL, NULL, 0}
