@@ -1,6 +1,7 @@
 # gpuR
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1027597.svg)](https://doi.org/10.5281/zenodo.1027597)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcdeterman%2FgpuR.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcdeterman%2FgpuR?ref=badge_shield)
 
 ### Gitter rooms available for discussion
 [![chat](https://img.shields.io/badge/gitter-chat-brightgreen.svg)](https://gitter.im/cdeterman/gpuR)
@@ -67,3 +68,7 @@ installation instructions relevant to your operating system.
 appreciate any feedback on how the installation and use fairs with other
 platforms and GPUs.
 2. Would love any suggestions :) (submit in the issues)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcdeterman%2FgpuR.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcdeterman%2FgpuR?ref=badge_large)
